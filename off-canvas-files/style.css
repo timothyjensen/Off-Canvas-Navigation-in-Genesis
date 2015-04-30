@@ -1,0 +1,200 @@
+/*
+	Title: How to Add a Mobile-Friendly, Off Canvas Menu in Genesis
+	Author: Calvin Makes (@calvin_makes)
+	Link: http://www.calvinmakes.com/add-a-mobile-friendly-off-canvas-menu-in-genesis
+*/
+
+/* ## Genesis Navigation Menu
+--------------------------------------------- */
+
+.genesis-nav-menu {
+	font-size: 16px;
+	line-height: 1;
+	list-style: none;
+	margin: 0;
+	padding-bottom: 40px; 
+}
+
+.genesis-nav-menu .menu-item {
+	margin: 0;
+}
+
+.genesis-nav-menu .menu-item a {
+	display: block;
+	color: #ffffff;
+	padding: 10px 40px;
+	font-family: "Raleway", sans-serif;
+	font-weight: 600;
+	font-size: 16px;
+	text-transform: uppercase;
+	border-bottom: none;
+	opacity: .6;
+	
+	/* Transitions */
+	-webkit-transition: all, 0.15s, ease-in-out;
+  	-moz-transition: all, 0.15s, ease-in-out;
+  	transition: all, 0.15s, ease-in-out;
+}
+
+.genesis-nav-menu .menu-item a:hover {
+	opacity: 1;
+    color: #fff;
+}
+
+.genesis-nav-menu .current-menu-item > a,
+.genesis-nav-menu .sub-menu .current-menu-item > a:hover {
+	opacity: 1;
+}
+
+.genesis-nav-menu .sub-menu {
+	display: block;
+}
+
+.genesis-nav-menu .sub-menu a {
+	display: block;
+	font-size: .9em;
+	line-height: 1.2em;
+	text-transform: none;
+	font-weight: normal;
+	margin-left: 20px;
+	-webkit-font-smoothing: antialiased;
+}
+
+.genesis-nav-menu .menu-item:hover {
+	position: static;
+}
+
+/* ## Primary Navigation
+--------------------------------------------- */
+
+.nav-primary {
+	position: fixed;
+	width: 260px;
+	height: 100%;
+	top: 0;
+	right: 0;
+	z-index: 9999;
+	background: #010101;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.nav-primary a {
+	color: #fff;
+}
+
+.nav-primary a:hover,
+.nav-primary .current-menu-item > a,
+.nav-primary .sub-menu .current-menu-item > a:hover {
+	color: #cb6c28;
+}
+
+/* ## Menu Button
+--------------------------------------------- */
+
+.site-header > .wrap {
+	position: relative;
+}
+
+.menu-btn {
+	position: absolute;
+	top: 40%;
+	right: 0;
+	color: #000;
+}
+
+.menu-btn:hover,
+.off-canvas-active .menu-btn {
+	color: #e5554e;
+}
+
+.menu-btn span {
+	line-height: 1.6;
+}
+
+/* ## Close Button
+--------------------------------------------- */
+
+.nav-primary .close-btn {
+	color: #fff;
+	display: block;
+	opacity: .4;
+	font-weight: 300;
+	font-style: italic;
+	font-family: "Roboto Slab", serif;
+	font-size: 16px;
+	padding: 50px 40px 20px;
+}
+
+.nav-primary .close-button:hover {
+	text-decoration: none;
+	opacity: 1;
+	color: #fff;
+}
+
+.nav-primary .close-button span {
+	float: right;
+	font-size: 16px;
+	margin-top: 2px;
+	font-weight: normal;
+}
+
+/* ## Animation Settings and Classes
+--------------------------------------------- */
+
+.off-canvas-active { 
+	overflow: hidden;
+}
+
+.nav-primary,
+.site-container {
+	transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+}
+
+.nav-primary {
+	-webkit-transform: translate3d(260px, 0, 0);
+	-moz-transform: translate3d(260px, 0, 0);
+	-ms-transform: translate3d(260px, 0, 0);
+	-o-transform: translate3d(260px, 0, 0);
+	transform: translate3d(260px, 0, 0);
+}
+
+.off-canvas-active .nav-primary {
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.site-container {
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+.off-canvas-active .site-container {
+	-webkit-transform: translate3d(-260px, 0, 0);
+	-moz-transform: translate3d(-260px, 0, 0);
+	-ms-transform: translate3d(-260px, 0, 0);
+	-o-transform: translate3d(-260px, 0, 0);
+	transform: translate3d(-260px, 0, 0);
+}
+
+/* ## Site Overlay
+--------------------------------------------- */
+.site-overlay {
+	display: none;
+}
+
+.off-canvas-active .site-overlay {
+	display: block;
+	position: fixed;
+	top: 0;
+	right: 260px;
+	bottom: 0;
+	left: 0;
+	z-index: 9999;
+}
