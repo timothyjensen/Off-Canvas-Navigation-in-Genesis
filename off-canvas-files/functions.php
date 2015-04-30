@@ -32,7 +32,12 @@ add_filter( 'genesis_nav_items', 'cm_close_btn', 10, 2 );
 add_filter( 'wp_nav_menu_items', 'cm_close_btn', 10, 2 );
 function cm_close_btn($menu, $args) {
 	$extras = '<a href="#" class="close-btn"><em>' . __( 'Close Navigation', 'CHILD_THEME_TEXT_DOMAIN' ) . '</em> <span class="dashicons dashicons-no"></span></a>';
-	return $extras . $menu;
+	
+	if ( $args->theme_location == "primary" ) {
+		return $extras . $menu;
+	} else {
+		return $menu;
+	}
 }
 
 /** 
