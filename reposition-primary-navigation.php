@@ -1,5 +1,5 @@
 <?php
-//* Do NOT include the opening PHP tag
+//* Do NOT include the opening PHP tag - Add to your functions.php file.
 
 /** Reposition the Primary navigation at the top of the DOM.
   * @author Calvin Makes
