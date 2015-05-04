@@ -4,7 +4,7 @@ jQuery( document ).ready(function( $ ) {
 	var open 			 = false, // Set the state of the menu on load (false = closed)
 		body             = $('body'),
 		siteContainer    = $('.site-container'),
-		toggleButtons    = $('.menu-btn, .close-btn, .site-overlay, .nav-primary a'); // Also select menu links to cause a trigger when navigating
+		toggleButtons    = $('.menu-btn, .close-btn, .site-overlay');
 
 	// Function to open the menu
 	function openMenu() {
