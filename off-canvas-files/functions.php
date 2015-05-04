@@ -46,7 +46,7 @@ function cm_close_btn($menu, $args) {
   * @link http://www.calvinmakes.com/add-a-mobile-friendly-off-canvas-menu-in-genesis
 */
 add_action( 'genesis_before', 'cm_site_overlay', 2 );
-function community_site_overlay() {
+function cm_site_overlay() {
 	echo '<div class="site-overlay"></div>';
 }
 
