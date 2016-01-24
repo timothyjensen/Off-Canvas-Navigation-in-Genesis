@@ -1,10 +1,14 @@
 /*
-	Title: How to Add a Mobile-Friendly, Off Canvas Menu in Genesis
-	Author: Calvin Makes (@calvin_makes)
-	Link: http://www.calvinmakes.com/add-a-mobile-friendly-off-canvas-menu-in-genesis
+	Author: Calvin Koepke (@cjkoepke)
+	Link: http://www.calvinkoepke.com/add-a-mobile-friendly-off-canvas-menu-in-genesis
+	Version:; 1.1
+	License: Free to use as you wish. Please share if you appreciate, and link to the post above.
 */
 
-/* ## Genesis Navigation Menu
+/* Style Our Navigation and Extras
+---------------------------------------------------------------------------------------------------- */
+
+/* Genesis Navigation Menu
 --------------------------------------------- */
 
 .genesis-nav-menu {
@@ -31,9 +35,11 @@
 	opacity: .6;
 	
 	/* Transitions */
-	-webkit-transition: all, 0.15s, ease-in-out;
-  	-moz-transition: all, 0.15s, ease-in-out;
-  	transition: all, 0.15s, ease-in-out;
+	-webkit-transition: all .15s ease-in-out;
+	-moz-transition: all .15s ease-in-out;
+	-ms-transition: all .15s ease-in-out;
+	-o-transition: all .15s ease-in-out;
+	transition: all .15s ease-in-out;
 }
 
 .genesis-nav-menu .menu-item a:hover {
@@ -64,7 +70,7 @@
 	position: static;
 }
 
-/* ## Primary Navigation
+/* Primary Navigation
 --------------------------------------------- */
 
 .nav-primary {
@@ -89,7 +95,7 @@
 	color: #cb6c28;
 }
 
-/* ## Menu Button
+/* Menu Button
 --------------------------------------------- */
 
 .site-header > .wrap {
@@ -112,7 +118,7 @@
 	line-height: 1.6;
 }
 
-/* ## Close Button
+/* Close Button
 --------------------------------------------- */
 
 .nav-primary .close-btn {
@@ -139,52 +145,55 @@
 	font-weight: normal;
 }
 
-/* ## Animation Settings and Classes
+
+/* Menu Animations
+---------------------------------------------------------------------------------------------------- */
+
+/* Animation Settings and Classes
 --------------------------------------------- */
 
-.off-canvas-active { 
+.off-canvas-active,
+.off-canvas-active .site-container { 
 	overflow: hidden;
 }
 
 .nav-primary,
 .site-container {
-	transition: transform 0.2s cubic-bezier(0.16, 0.68, 0.43, 0.99);
+	-webkit-transition: all .2ss ease-in-out;
+	-moz-transition: all .2ss ease-in-out;
+	-ms-transition: all .2ss ease-in-out;
+	-o-transition: all .2ss ease-in-out;
+	transition: all .2ss ease-in-out;
 }
 
 .nav-primary {
-	-webkit-transform: translate3d(260px, 0, 0);
-	-moz-transform: translate3d(260px, 0, 0);
-	-ms-transform: translate3d(260px, 0, 0);
-	-o-transform: translate3d(260px, 0, 0);
-	transform: translate3d(260px, 0, 0);
+	-webkit-transform: translateX(260px);
+	-moz-transform: translateX(260px);
+	-ms-transform: translateX(260px);
+	-o-transform: translateX(260px);
+	transform: translateX(260px);
 }
 
-.off-canvas-active .nav-primary {
-	-webkit-transform: translate3d(0, 0, 0);
-	-moz-transform: translate3d(0, 0, 0);
-	-ms-transform: translate3d(0, 0, 0);
-	-o-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
-}
-
+.off-canvas-active .nav-primary,
 .site-container {
-	-webkit-transform: translate3d(0, 0, 0);
-	-moz-transform: translate3d(0, 0, 0);
-	-ms-transform: translate3d(0, 0, 0);
-	-o-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
+	-webkit-transform: translateX(0);
+	-moz-transform: translateX(0);
+	-ms-transform: translateX(0);
+	-o-transform: translateX(0);
+	transform: translateX(0);
 }
 
 .off-canvas-active .site-container {
-	-webkit-transform: translate3d(-260px, 0, 0);
-	-moz-transform: translate3d(-260px, 0, 0);
-	-ms-transform: translate3d(-260px, 0, 0);
-	-o-transform: translate3d(-260px, 0, 0);
-	transform: translate3d(-260px, 0, 0);
+	-webkit-transform: translateX(-260px);
+	-moz-transform: translateX(-260px);
+	-ms-transform: translateX(-260px);
+	-o-transform: translateX(-260px);
+	transform: translateX(-260px);
 }
 
-/* ## Site Overlay
+/* Site Overlay
 --------------------------------------------- */
+
 .site-overlay {
 	display: none;
 }
@@ -196,5 +205,5 @@
 	right: 260px;
 	bottom: 0;
 	left: 0;
-	z-index: 9999;
+	z-index: 9998;
 }
