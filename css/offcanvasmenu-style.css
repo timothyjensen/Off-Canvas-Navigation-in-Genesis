@@ -8,202 +8,220 @@
 /* Style Our Navigation and Extras
 ---------------------------------------------------------------------------------------------------- */
 
-/* Genesis Navigation Menu
---------------------------------------------- */
+@media only screen and (min-width: 801px) {
 
-.genesis-nav-menu {
-	font-size: 16px;
-	line-height: 1;
-	list-style: none;
-	margin: 0;
-	padding-bottom: 40px; 
+	.menu-btn.right.small,
+	.genesis-mobile-menu,
+	a.close-btn {
+		display: none;
+	}
 }
 
-.genesis-nav-menu .menu-item {
-	margin: 0;
-}
+@media only screen and (max-width: 800px) {
 
-.genesis-nav-menu .menu-item a {
-	display: block;
-	color: #ffffff;
-	padding: 10px 40px;
-	font-family: "Raleway", sans-serif;
-	font-weight: 600;
-	font-size: 16px;
-	text-transform: uppercase;
-	border-bottom: none;
-	opacity: .6;
-	
-	/* Transitions */
-	-webkit-transition: all .15s ease-in-out;
-	-moz-transition: all .15s ease-in-out;
-	-ms-transition: all .15s ease-in-out;
-	-o-transition: all .15s ease-in-out;
-	transition: all .15s ease-in-out;
-}
+	/* Genesis Navigation Menu
+	--------------------------------------------- */
+	.nav-primary {
+		display: none;
+	}
 
-.genesis-nav-menu .menu-item a:hover {
-	opacity: 1;
-    color: #fff;
-}
+	.genesis-mobile-menu {
+		font-size: 16px;
+		line-height: 1;
+		list-style: none;
+		margin: 0;
+		padding-bottom: 40px; 
+	}
 
-.genesis-nav-menu .current-menu-item > a,
-.genesis-nav-menu .sub-menu .current-menu-item > a:hover {
-	opacity: 1;
-}
+	.genesis-mobile-menu .menu-item {
+		margin: 0;
+	}
 
-.genesis-nav-menu .sub-menu {
-	display: block;
-}
+	.genesis-mobile-menu .menu-item a {
+		display: block;
+		color: #ffffff;
+		padding: 10px 40px;
+		font-family: inherit, sans-serif;
+		font-weight: 600;
+		font-size: 16px;
+		text-transform: uppercase;
+		border-bottom: none;
+		opacity: .6;
+		
+		/* Transitions */
+		-webkit-transition: all .15s ease-in-out;
+		-moz-transition: all .15s ease-in-out;
+		-ms-transition: all .15s ease-in-out;
+		-o-transition: all .15s ease-in-out;
+		transition: all .15s ease-in-out;
+	}
 
-.genesis-nav-menu .sub-menu a {
-	display: block;
-	font-size: .9em;
-	line-height: 1.2em;
-	text-transform: none;
-	font-weight: normal;
-	margin-left: 20px;
-	-webkit-font-smoothing: antialiased;
-}
+	.genesis-mobile-menu .menu-item a:hover {
+		opacity: 1;
+	    color: #fff;
+	}
 
-.genesis-nav-menu .menu-item:hover {
-	position: static;
-}
+	.genesis-mobile-menu .current-menu-item > a,
+	.genesis-mobile-menu .sub-menu .current-menu-item > a:hover {
+		opacity: 1;
+	}
 
-/* Primary Navigation
---------------------------------------------- */
+	.genesis-mobile-menu .sub-menu {
+		display: block;
+	}
 
-.nav-primary {
-	position: fixed;
-	width: 260px;
-	height: 100%;
-	top: 0;
-	right: 0;
-	z-index: 9999;
-	background: #010101;
-	overflow: auto;
-	-webkit-overflow-scrolling: touch;
-}
+	.genesis-mobile-menu .sub-menu a {
+		display: block;
+		font-size: .9em;
+		line-height: 1.2em;
+		text-transform: none;
+		font-weight: normal;
+		margin-left: 20px;
+		-webkit-font-smoothing: antialiased;
+	}
 
-.nav-primary a {
-	color: #fff;
-}
+	.genesis-mobile-menu .menu-item:hover {
+		position: static;
+	}
 
-.nav-primary a:hover,
-.nav-primary .current-menu-item > a,
-.nav-primary .sub-menu .current-menu-item > a:hover {
-	color: #cb6c28;
-}
+	/* Primary Navigation
+	--------------------------------------------- */
 
-/* Menu Button
---------------------------------------------- */
+	.nav-mobile {
+		position: fixed;
+		width: 260px;
+		height: 100%;
+		top: 0;
+		right: 0;
+		z-index: 9999;
+		background: #010101;
+		overflow: auto;
+		-webkit-overflow-scrolling: touch;
+	}
 
-.site-header > .wrap {
-	position: relative;
-}
+	.nav-mobile a {
+		color: #fff;
+	}
 
-.menu-btn {
-	position: absolute;
-	top: 40%;
-	right: 0;
-	color: #000;
-}
+	.nav-mobile a:hover,
+	.nav-mobile .current-menu-item > a,
+	.nav-mobile .sub-menu .current-menu-item > a:hover {
+		color: #cb6c28;
+	}
 
-.menu-btn:hover,
-.off-canvas-active .menu-btn {
-	color: #e5554e;
-}
+	/* Menu Button
+	--------------------------------------------- */
 
-.menu-btn span {
-	line-height: 1.6;
-}
+	.site-header > .wrap {
+		position: relative;
+	}
 
-/* Close Button
---------------------------------------------- */
+	.menu-btn {
+		position: absolute;
+		top: 40%;
+		right: 0;
+		color: #000;
+	}
 
-.nav-primary .close-btn {
-	color: #fff;
-	display: block;
-	opacity: .4;
-	font-weight: 300;
-	font-style: italic;
-	font-family: "Roboto Slab", serif;
-	font-size: 16px;
-	padding: 50px 40px 20px;
-}
+	.menu-btn:hover {
+		color: #e5554e;
+	}
 
-.nav-primary .close-button:hover {
-	text-decoration: none;
-	opacity: 1;
-	color: #fff;
-}
+	.off-canvas-active .menu-btn {
+		display: none;
+	}
 
-.nav-primary .close-button span {
-	float: right;
-	font-size: 16px;
-	margin-top: 2px;
-	font-weight: normal;
-}
+	.menu-btn span {
+		line-height: 1.6;
+	}
+
+	/* Close Button
+	--------------------------------------------- */
+
+	.nav-mobile .close-btn {
+		color: #fff;
+		display: block;
+		opacity: .4;
+		font-weight: 300;
+		font-style: italic;
+		font-family: inherit, serif;
+		font-size: 16px;
+		padding: 50px 40px 20px;
+	}
+
+	.nav-mobile .close-button:hover {
+		text-decoration: none;
+		opacity: 1;
+		color: #fff;
+	}
+
+	.nav-mobile .close-button span {
+		float: right;
+		font-size: 16px;
+		margin-top: 2px;
+		font-weight: normal;
+	}
 
 
-/* Menu Animations
----------------------------------------------------------------------------------------------------- */
+	/* Menu Animations
+	---------------------------------------------------------------------------------------------------- */
 
-/* Animation Settings and Classes
---------------------------------------------- */
+	/* Animation Settings and Classes
+	--------------------------------------------- */
 
-.off-canvas-active,
-.off-canvas-active .site-container { 
-	overflow: hidden;
-}
+	.off-canvas-active,
+	.off-canvas-active .site-container { 
+		overflow: hidden;
+	}
 
-.nav-primary,
-.site-container {
-	-webkit-transition: all .2ss ease-in-out;
-	-moz-transition: all .2ss ease-in-out;
-	-ms-transition: all .2ss ease-in-out;
-	-o-transition: all .2ss ease-in-out;
-	transition: all .2ss ease-in-out;
-}
+	.nav-mobile,
+	.site-container {
+		-webkit-transition: all .2ss ease-in-out;
+		-moz-transition: all .2ss ease-in-out;
+		-ms-transition: all .2ss ease-in-out;
+		-o-transition: all .2ss ease-in-out;
+		transition: all .2ss ease-in-out;
+	}
 
-.nav-primary {
-	-webkit-transform: translateX(260px);
-	-moz-transform: translateX(260px);
-	-ms-transform: translateX(260px);
-	-o-transform: translateX(260px);
-	transform: translateX(260px);
-}
+	.nav-mobile {
+		-webkit-transform: translateX(260px);
+		-moz-transform: translateX(260px);
+		-ms-transform: translateX(260px);
+		-o-transform: translateX(260px);
+		transform: translateX(260px);
+	}
 
-.off-canvas-active .nav-primary,
-.site-container {
-	-webkit-transform: translateX(0);
-	-moz-transform: translateX(0);
-	-ms-transform: translateX(0);
-	-o-transform: translateX(0);
-	transform: translateX(0);
-}
+	.off-canvas-active .nav-mobile,
+	.site-container {
+		-webkit-transform: translateX(0);
+		-moz-transform: translateX(0);
+		-ms-transform: translateX(0);
+		-o-transform: translateX(0);
+		transform: translateX(0);
+	}
 
-.off-canvas-active .site-container {
-	-webkit-transform: translateX(-260px);
-	-moz-transform: translateX(-260px);
-	-ms-transform: translateX(-260px);
-	-o-transform: translateX(-260px);
-	transform: translateX(-260px);
-}
+	.off-canvas-active .site-container {
+		-webkit-transform: translateX(-260px);
+		-moz-transform: translateX(-260px);
+		-ms-transform: translateX(-260px);
+		-o-transform: translateX(-260px);
+		transform: translateX(-260px);
+	}
 
-/* Site Overlay
---------------------------------------------- */
+	/* Site Overlay
+	--------------------------------------------- */
 
-.site-overlay {
-	display: none;
-}
+	.site-overlay {
+		display: none;
+	}
 
-.off-canvas-active .site-overlay {
-	display: block;
-	position: fixed;
-	top: 0;
-	right: 260px;
-	bottom: 0;
-	left: 0;
-	z-index: 9998;
+	.off-canvas-active .site-overlay {
+		display: block;
+		position: fixed;
+		top: 0;
+		right: 260px;
+		bottom: 0;
+		left: 0;
+		z-index: 9998;
+	}
 }
