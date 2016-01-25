@@ -118,13 +118,13 @@
 
 	.menu-btn {
 		position: absolute;
-		top: 40%;
-		right: 0;
+		top: 10px;
+		right: 10px;
 		color: #000;
 	}
 
 	.menu-btn:hover {
-		color: #e5554e;
+		color: inherit;
 	}
 
 	.off-canvas-active .menu-btn {
@@ -132,7 +132,8 @@
 	}
 
 	.menu-btn span {
-		line-height: 1.6;
+		font-size: 4rem;
+		width: 100%;
 	}
 
 	/* Close Button
