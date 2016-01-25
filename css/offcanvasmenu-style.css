@@ -106,7 +106,7 @@
 	.nav-mobile a:hover,
 	.nav-mobile .current-menu-item > a,
 	.nav-mobile .sub-menu .current-menu-item > a:hover {
-		color: #cb6c28;
+		text-decoration: underline;
 	}
 
 	/* Menu Button
